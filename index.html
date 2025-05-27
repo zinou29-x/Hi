@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>نموذج ZD - تسجيل الدخول</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 30px;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تسجيل الدخول - ZD</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    #loginForm {
-      max-width: 400px;
-      margin: auto;
-      background-color: #1f1f1f;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00e6c3;
-    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-    input, button {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      background-color: #333;
-      color: white;
-    }
+    img {
+      width: 120px;
+      margin-bottom: 20px;
+      filter: brightness(1.2);
+    }
 
-    button {
-      background-color: #00e6c3;
-      color: black;
-      cursor: pointer;
-    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #00e6c3;
+      text-shadow: 0 0 10px #00e6c3;
+    }
 
-    button:hover {
-      background-color: #00ccb0;
-    }
-  </style>
+    form {
+      background-color: #1f1f1f;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 230, 195, 0.3);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    input {
+      background-color: #2c2c2c;
+      color: white;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 5px #00e6c3;
+    }
+
+    button {
+      background-color: #00e6c3;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00bfa6;
+      box-shadow: 0 0 10px #00e6c3;
+    }
+  </style>
 </head>
 <body>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Zdnet_logo.svg" alt="ZD Logo" width="100" />
- 
-  <form id="loginForm">
-    <input type="text" name="username" placeholder="اسم المستخدم" required />
-    <input type="password" name="password" placeholder="كلمة المرور" required />
-    <button type="submit">تسجيل الدخول</button>
-  </form>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Zdnet_logo.svg" alt="شعار ZD" />
+  <h1>تسجيل الدخول</h1>
 
-  <script>
-    const loginForm = document.getElementById('loginForm');
+  <form id="loginForm">
+    <input type="text" name="username" placeholder="اسم المستخدم" required />
+    <input type="password" name="password" placeholder="كلمة المرور" required />
+    <button type="submit">تسجيل الدخول</button>
+  </form>
 
-    loginForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // هنا ممكن تضيف تحقق من صحة البيانات إذا تريد
-
-      // فتح صفحة الترحيب في نفس النافذة
-      window.location.href = 'welcome.html';
-    });
-  </script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = "welcome.html";
+    });
+  </script>
 </body>
 </html>
